@@ -1,0 +1,70 @@
+{
+  "total_prompts": 500,
+  "single_task_prompts": 350,
+  "multi_task_prompts": 150,
+  "multi_task_ratio": 0.3,
+  "dependent_prompts": 60,
+  "dependent_ratio": 0.4,
+  "total_segments": 650,
+  "intent_distribution": {
+    "code": {
+      "count": 77,
+      "pct": 11.8
+    },
+    "communication": {
+      "count": 67,
+      "pct": 10.3
+    },
+    "data_analysis": {
+      "count": 58,
+      "pct": 8.9
+    },
+    "documentation": {
+      "count": 48,
+      "pct": 7.4
+    },
+    "explanation": {
+      "count": 76,
+      "pct": 11.7
+    },
+    "math": {
+      "count": 49,
+      "pct": 7.5
+    },
+    "prediction": {
+      "count": 50,
+      "pct": 7.7
+    },
+    "research": {
+      "count": 51,
+      "pct": 7.8
+    },
+    "simulation": {
+      "count": 43,
+      "pct": 6.6
+    },
+    "summarization": {
+      "count": 57,
+      "pct": 8.8
+    },
+    "translation": {
+      "count": 74,
+      "pct": 11.4
+    }
+  },
+  "complexity": {
+    "mean": 0.58,
+    "min": 0.2,
+    "max": 0.93
+  },
+  "routing": {
+    "strong_model_segments": 331,
+    "weak_model_segments": 319,
+    "strong_pct": 50.9
+  },
+  "prompt_length": {
+    "mean_words": 12.7,
+    "min_words": 4,
+    "max_words": 31
+  }
+}

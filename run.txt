@@ -1,0 +1,68 @@
+# Without API — what you already have
+python dataset_generator.py --num-samples 6000
+
+# With API — more variety
+GEMINI_API_KEY=your_key_here python dataset_generator.py --num-samples 8000 --use-llm
+
+
+PYTHONPATH=. python Intent_complexity/intent_trainer.py --data dataset/dataset.json --epochs 5
+# For paper robustness:
+python intent_trainer.py --data data/dataset.jsonl --epochs 5 --cross-val 5
+
+
+PYTHONPATH=. python router/train_router.py --data dataset/dataset.json --rounds 5
+# With cross-validation for paper:
+python router_trainer.py --data data/dataset.jsonl --cross-val 5
+
+
+PYTHONPATH=. python semantic_decom_dependency/decomposition_dependency.py --data dataset/dataset.json
+
+engine = ExecutionEngine(backend="simulated")  # or "groq"
+result = engine.execute(routed_segments, execution_plan, prompt_id=1)
+engine.print_report(result)
+
+# Baseline comparison
+baseline = engine.execute_baseline("Full prompt text here")
+
+safety = SafetySystem()
+
+# Pre-execution: mark unsafe segments
+segments = safety.check_segments_pre(segments)
+
+# Post-execution: filter outputs  
+outputs = safety.check_outputs_post(execution_results)
+
+
+GEMINI_API_KEY=AIzaSyCP7wtDN04C3oBmJ-eeA90GYd-07FhTbzU python dataset/synthetic_dataset.py --num-samples 10000 --use-llm
+
+
+# 1. Generate dataset
+python dataset_generator.py --num-samples 6000
+
+# 2. Train intent classifier
+python intent_trainer.py --data data/dataset.jsonl --epochs 5
+
+# 3. Train router
+python router_trainer.py --data data/dataset.jsonl
+
+# 4. Evaluate decomposer
+python decomposer_dag.py --data data/dataset.jsonl
+
+# 5. Run full pipeline (simulated — no API key)
+python pipeline.py --data data/dataset.jsonl --max-samples 100
+
+# 6. Run full pipeline (real — needs GROQ_API_KEY)
+GROQ_API_KEY=your_key python pipeline.py --data data/dataset.jsonl --backend groq --max-samples 50
+
+# 7. Single prompt demo
+python pipeline.py --prompt "Solve x+2=5 and also translate hello to French" --backend simulated
+
+
+global cache 
+key = hash(text)
+
+if key in GLOBAL_CACHE:
+    return GLOBAL_CACHE[key]
+
+output = model_call(...)
+GLOBAL_CACHE[key] = output

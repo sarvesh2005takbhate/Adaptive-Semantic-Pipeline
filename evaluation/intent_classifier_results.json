@@ -1,0 +1,369 @@
+{
+  "model": "distilbert-base-uncased",
+  "num_labels": 11,
+  "label_names": [
+    "math",
+    "code",
+    "simulation",
+    "research",
+    "prediction",
+    "data_analysis",
+    "translation",
+    "summarization",
+    "explanation",
+    "communication",
+    "documentation"
+  ],
+  "training": {
+    "epochs": 5,
+    "batch_size": 16,
+    "learning_rate": 2e-05,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01,
+    "max_length": 128,
+    "training_time_seconds": 23.0,
+    "train_loss": 1.7215
+  },
+  "dataset": {
+    "total_segments": 650,
+    "train_size": 448,
+    "val_size": 101,
+    "test_size": 7,
+    "intent_counts": {
+      "code": 77,
+      "explanation": 76,
+      "translation": 74,
+      "communication": 67,
+      "data_analysis": 58,
+      "summarization": 57,
+      "research": 51,
+      "prediction": 50,
+      "math": 49,
+      "documentation": 48,
+      "simulation": 43
+    }
+  },
+  "validation": {
+    "split": "validation",
+    "n_samples": 101,
+    "accuracy": 0.7327,
+    "f1_weighted": 0.7268,
+    "f1_macro": 0.7236,
+    "top2_accuracy": 0.8812,
+    "top3_accuracy": 0.9307,
+    "per_class": {
+      "math": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1-score": 0.9,
+        "support": 10.0
+      },
+      "code": {
+        "precision": 0.6428571428571429,
+        "recall": 0.9,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "simulation": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1-score": 0.8571428571428571,
+        "support": 4.0
+      },
+      "research": {
+        "precision": 0.5714285714285714,
+        "recall": 0.4444444444444444,
+        "f1-score": 0.5,
+        "support": 9.0
+      },
+      "prediction": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.6666666666666666,
+        "support": 6.0
+      },
+      "data_analysis": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 12.0
+      },
+      "translation": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "summarization": {
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "f1-score": 0.9565217391304348,
+        "support": 12.0
+      },
+      "explanation": {
+        "precision": 0.5,
+        "recall": 0.9166666666666666,
+        "f1-score": 0.6470588235294118,
+        "support": 12.0
+      },
+      "communication": {
+        "precision": 1.0,
+        "recall": 0.42857142857142855,
+        "f1-score": 0.6,
+        "support": 7.0
+      },
+      "documentation": {
+        "precision": 1.0,
+        "recall": 0.4444444444444444,
+        "f1-score": 0.6153846153846154,
+        "support": 9.0
+      },
+      "accuracy": 0.7326732673267327,
+      "macro avg": {
+        "precision": 0.8134199134199135,
+        "recall": 0.7152236652236653,
+        "f1-score": 0.723585578956423,
+        "support": 101.0
+      },
+      "weighted avg": {
+        "precision": 0.8043375766148043,
+        "recall": 0.7326732673267327,
+        "f1-score": 0.7268316803856547,
+        "support": 101.0
+      }
+    },
+    "confidence_by_class": {
+      "math": {
+        "mean_confidence": 0.2969,
+        "accuracy": 0.9,
+        "n_samples": 10,
+        "overconfident": -0.6031
+      },
+      "code": {
+        "mean_confidence": 0.4967,
+        "accuracy": 0.9,
+        "n_samples": 10,
+        "overconfident": -0.4033
+      },
+      "simulation": {
+        "mean_confidence": 0.2801,
+        "accuracy": 0.75,
+        "n_samples": 4,
+        "overconfident": -0.4699
+      },
+      "research": {
+        "mean_confidence": 0.2877,
+        "accuracy": 0.4444,
+        "n_samples": 9,
+        "overconfident": -0.1567
+      },
+      "prediction": {
+        "mean_confidence": 0.3176,
+        "accuracy": 0.6667,
+        "n_samples": 6,
+        "overconfident": -0.3491
+      },
+      "data_analysis": {
+        "mean_confidence": 0.2012,
+        "accuracy": 0.5,
+        "n_samples": 12,
+        "overconfident": -0.2988
+      },
+      "translation": {
+        "mean_confidence": 0.4822,
+        "accuracy": 1.0,
+        "n_samples": 10,
+        "overconfident": -0.5178
+      },
+      "summarization": {
+        "mean_confidence": 0.3029,
+        "accuracy": 0.9167,
+        "n_samples": 12,
+        "overconfident": -0.6138
+      },
+      "explanation": {
+        "mean_confidence": 0.3485,
+        "accuracy": 0.9167,
+        "n_samples": 12,
+        "overconfident": -0.5682
+      },
+      "communication": {
+        "mean_confidence": 0.3149,
+        "accuracy": 0.4286,
+        "n_samples": 7,
+        "overconfident": -0.1137
+      },
+      "documentation": {
+        "mean_confidence": 0.2564,
+        "accuracy": 0.4444,
+        "n_samples": 9,
+        "overconfident": -0.188
+      }
+    },
+    "calibration": {
+      "ece": 0.3944,
+      "mean_confidence": 0.3279
+    },
+    "n_errors": 27,
+    "top_error_pairs": [
+      {
+        "true": "research",
+        "predicted": "explanation",
+        "count": 5
+      },
+      {
+        "true": "data_analysis",
+        "predicted": "research",
+        "count": 3
+      },
+      {
+        "true": "documentation",
+        "predicted": "code",
+        "count": 3
+      },
+      {
+        "true": "prediction",
+        "predicted": "explanation",
+        "count": 2
+      },
+      {
+        "true": "communication",
+        "predicted": "explanation",
+        "count": 2
+      },
+      {
+        "true": "communication",
+        "predicted": "translation",
+        "count": 2
+      },
+      {
+        "true": "data_analysis",
+        "predicted": "prediction",
+        "count": 2
+      },
+      {
+        "true": "data_analysis",
+        "predicted": "code",
+        "count": 1
+      },
+      {
+        "true": "code",
+        "predicted": "translation",
+        "count": 1
+      },
+      {
+        "true": "simulation",
+        "predicted": "math",
+        "count": 1
+      }
+    ]
+  },
+  "test": {
+    "split": "test",
+    "n_samples": 7,
+    "accuracy": 0.5714,
+    "f1_weighted": 0.4762,
+    "f1_macro": 0.4,
+    "top2_accuracy": 0.5714,
+    "top3_accuracy": 0.5714,
+    "per_class": {
+      "code": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "data_analysis": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "translation": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 1.0
+      },
+      "summarization": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "explanation": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "accuracy": 0.5714285714285714,
+      "macro avg": {
+        "precision": 0.4,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 7.0
+      },
+      "weighted avg": {
+        "precision": 0.5,
+        "recall": 0.5714285714285714,
+        "f1-score": 0.47619047619047616,
+        "support": 7.0
+      }
+    },
+    "confidence_by_class": {
+      "code": {
+        "mean_confidence": 0.1904,
+        "accuracy": 0.0,
+        "n_samples": 1,
+        "overconfident": 0.1904
+      },
+      "data_analysis": {
+        "mean_confidence": 0.1827,
+        "accuracy": 0.0,
+        "n_samples": 1,
+        "overconfident": 0.1827
+      },
+      "translation": {
+        "mean_confidence": 0.3922,
+        "accuracy": 1.0,
+        "n_samples": 1,
+        "overconfident": -0.6078
+      },
+      "summarization": {
+        "mean_confidence": 0.2539,
+        "accuracy": 0.5,
+        "n_samples": 2,
+        "overconfident": -0.2461
+      },
+      "explanation": {
+        "mean_confidence": 0.1526,
+        "accuracy": 1.0,
+        "n_samples": 2,
+        "overconfident": -0.8474
+      }
+    },
+    "calibration": {
+      "ece": 0.4499,
+      "mean_confidence": 0.2255
+    },
+    "n_errors": 3,
+    "top_error_pairs": [
+      {
+        "true": "data_analysis",
+        "predicted": "explanation",
+        "count": 1
+      },
+      {
+        "true": "summarization",
+        "predicted": "translation",
+        "count": 1
+      },
+      {
+        "true": "code",
+        "predicted": "explanation",
+        "count": 1
+      }
+    ]
+  }
+}

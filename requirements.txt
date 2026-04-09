@@ -1,0 +1,59 @@
+# ═══════════════════════════════════════════════════════════
+#  Adaptive Semantic Parallelism — Requirements
+# ═══════════════════════════════════════════════════════════
+
+# ── Core ML ─────────────────────────────────────────────────
+torch>=2.0.0
+transformers>=4.36.0
+datasets>=2.16.0
+accelerate>=0.25.0
+
+# ── Router ──────────────────────────────────────────────────
+lightgbm>=4.1.0
+scikit-learn>=1.3.0
+
+# ── NLP Pipeline ────────────────────────────────────────────
+spacy>=3.7.0
+
+# ── Data & Analysis ─────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.24.0
+
+# ── Evaluation Metrics ──────────────────────────────────────
+rouge-score>=0.1.2
+bert-score>=0.3.13
+nltk>=3.8.0
+
+# ── Visualization ──────────────────────────────────────────
+matplotlib>=3.7.0
+seaborn>=0.13.0
+
+# ── API Calls (Execution Engine) ───────────────────────────
+groq>=0.4.0
+requests>=2.31.0
+
+# ── Optional: LLM Paraphrasing for Dataset Gen ────────────
+google-generativeai>=0.3.0
+
+# ── Utilities ──────────────────────────────────────────────
+tqdm>=4.65.0
+
+
+# 1. Create environment
+conda create -n asp python=3.11 -y
+conda activate asp
+
+# 2. Install PyTorch (pick ONE)
+# GPU (CUDA 12.1):
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# CPU only:
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+# 3. Install everything else
+pip install -r requirements.txt
+
+# 4. Download spaCy model
+python -m spacy download en_core_web_sm
+
+# 5. Download NLTK data (for BLEU)
+python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"

@@ -1,0 +1,70 @@
+{
+  "n_prompts": 50,
+  "n_errors": 0,
+  "n_segments_total": 70,
+  "multi_task_prompts": 20,
+  "multi_task_pct": 40.0,
+  "latency": {
+    "pipeline_mean_ms": 2876.96,
+    "pipeline_median_ms": 1759.15,
+    "baseline_mean_ms": 3648.41,
+    "baseline_median_ms": 2023.55,
+    "reduction_mean_pct": -8.68,
+    "reduction_median_pct": 1.37,
+    "positive_reduction_pct": 50.0
+  },
+  "cost": {
+    "pipeline_total": 0.008142,
+    "baseline_total": 0.008932,
+    "reduction_mean_pct": 16.97,
+    "reduction_total_pct": 8.84
+  },
+  "routing": {
+    "strong": 30,
+    "weak": 40,
+    "weak_pct": 57.1
+  },
+  "parallelism": {
+    "mean_ratio": 0.28
+  },
+  "timing_breakdown_ms": {
+    "decompose": 14.45,
+    "classify": 8.53,
+    "route": 0.28,
+    "execute": 2852.21,
+    "safety_pre": 0.1,
+    "safety_post": 1.3,
+    "verify": 0.09,
+    "aggregate": 0.0
+  },
+  "feedback": {
+    "total": 70,
+    "passed": 70,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "escalation_candidates": 0
+  },
+  "safety": {
+    "input_checks": 70,
+    "output_checks": 70,
+    "policy": {
+      "max_output_length": 4096,
+      "min_output_length": 3,
+      "confidence_gate": 0.3,
+      "max_repetition_ratio": 0.5,
+      "n_category_rules": 19,
+      "n_pii_patterns": 5,
+      "n_hallucination_patterns": 6,
+      "n_refusal_patterns": 4
+    },
+    "escalation": {
+      "total_decisions": 36,
+      "pass": 0,
+      "warn": 35,
+      "redact": 0,
+      "block": 1,
+      "escalate": 0,
+      "block_rate": 0.0278
+    }
+  }
+}

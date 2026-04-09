@@ -1,0 +1,159 @@
+{
+  "total_prompts": 500,
+  "segmentation": {
+    "count_accuracy": 0.9,
+    "over_split_rate": 0.086,
+    "under_split_rate": 0.014,
+    "exact_match": 450,
+    "over_split": 43,
+    "under_split": 7
+  },
+  "single_task": {
+    "total": 350,
+    "correct": 339,
+    "accuracy": 0.9686
+  },
+  "multi_task": {
+    "total": 150,
+    "correct": 111,
+    "accuracy": 0.74
+  },
+  "dependency_detection": {
+    "precision": 0.5204,
+    "recall": 0.85,
+    "f1": 0.6456,
+    "true_positives": 51,
+    "false_positives": 47,
+    "false_negatives": 9
+  },
+  "parallelism": {
+    "mean_ratio": 0.1598,
+    "median_ratio": 0.0
+  },
+  "latency": {
+    "mean_ms": 18.34,
+    "p95_ms": 42.05
+  },
+  "top_errors": [
+    {
+      "prompt": "What are the open research questions in economics. Once that is done, check what's going on this and also write code for",
+      "gold_count": 2,
+      "pred_count": 4,
+      "error": 2
+    },
+    {
+      "prompt": "Normalize the ImageNet dataset and explain the transformation. Once that is done, summarize  main conclusions of this st",
+      "gold_count": 2,
+      "pred_count": 4,
+      "error": 2
+    },
+    {
+      "prompt": "Write code to parse XML files and extract id, timestamp, value. In addition, check what's going on this and also write c",
+      "gold_count": 2,
+      "pred_count": 4,
+      "error": 2
+    },
+    {
+      "prompt": "translate these api endpoint descriptions to russian. While you're at it, translate the terms of service to hindi.",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "Calculate  mutual information between income and purchase_amount. While you're at it, Draft an out-of-office message for",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "rewrite in another language this and tell me what it means",
+      "gold_count": 1,
+      "pred_count": 2,
+      "error": 1
+    },
+    {
+      "prompt": "check what's going on this and also write code for it. Also, can u explain this and make it short.",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "Translate this error message to Arabic: \"Connection timed out. Please try again.\"",
+      "gold_count": 1,
+      "pred_count": 2,
+      "error": 1
+    },
+    {
+      "prompt": "what's going on here and can u make this shorter, and also make this shorter and explain it.",
+      "gold_count": 2,
+      "pred_count": 1,
+      "error": -1
+    },
+    {
+      "prompt": "rewrite in anor language this and tell me what it means",
+      "gold_count": 1,
+      "pred_count": 2,
+      "error": 1
+    },
+    {
+      "prompt": "Solve the recurrence relation a(n) = 2a(n-1) + 1",
+      "gold_count": 1,
+      "pred_count": 2,
+      "error": 1
+    },
+    {
+      "prompt": "Start by make this shorter this but also explain in detail. Then draft a project status update email for all departments",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "Find the derivative of 1/(1+x\u00b2). In addition, check what's going on this and also write code for it.",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "First, help me understand this and code it. Then, based on the result, check what's going on this and also write code fo",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "help me understand this and code it, and also Prove by induction that 2\u207f > n for all n \u2265 1.",
+      "gold_count": 2,
+      "pred_count": 1,
+      "error": -1
+    },
+    {
+      "prompt": "make this shorter this but also explain in detail",
+      "gold_count": 1,
+      "pred_count": 2,
+      "error": 1
+    },
+    {
+      "prompt": "First, normalize the the company dataset dataset and explain the transformation. Then, based on the result, write a one-",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "Can you compute  Gini coefficient for  income distribution in CIFAR-10. Once that is done, Estimate the future price of ",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "Convert  following news headline to Mandarin. Also, check what's going on this and also write code for it.",
+      "gold_count": 2,
+      "pred_count": 3,
+      "error": 1
+    },
+    {
+      "prompt": "look into this and also write code for it",
+      "gold_count": 1,
+      "pred_count": 2,
+      "error": 1
+    }
+  ]
+}
